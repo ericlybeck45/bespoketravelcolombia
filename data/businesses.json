@@ -1,0 +1,48 @@
+{
+  "businesses": [
+    {
+      "slug": "bespoke-travel-tours-colombia",
+      "name": "Bespoke Travel & Tours of Colombia",
+      "type": "TravelAgent",
+      "valueProposition": "25 years of U.S.-to-Colombia bespoke travel planning expertise.",
+      "contact": {
+        "mainContact": "Eric Lybeck",
+        "email": "Eric@lybeck.com",
+        "phone": "415-996-7489",
+        "address": {
+          "street": "880 E Palm Canyon Dr #102",
+          "city": "Palm Springs",
+          "state": "CA",
+          "postalCode": "92264"
+        }
+      },
+      "areaServed": "United States",
+      "hours": "By appointment only",
+      "faqs": [
+        {
+          "q": "Is Colombia a safe place to travel to for Americans?",
+          "a": "Yes, all cities we recommend have lower crime rates than any major U.S. city."
+        },
+        {
+          "q": "Is Colombia expensive?",
+          "a": "We can recommend tours from $25 per day to $500 per day."
+        }
+      ],
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=900&q=80",
+          "alt": "A panoramic view of Bogota, Colombia with mountains in the background. Photo by Random Institute on Unsplash (https://unsplash.com/photos/photo-1506744038136-46273834b3fb)."
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=900&q=80",
+          "alt": "Vibrant cityscape of Medellin, Colombia in the Aburrá Valley. Photo by Random Institute on Unsplash (https://unsplash.com/photos/photo-1519681393784-d120267933ba)."
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=900&q=80",
+          "alt": "The historic walled city of Cartagena, Colombia overlooking the Caribbean Sea. Photo by Random Institute on Unsplash (https://unsplash.com/photos/photo-1502086223501-7ea6ecd79368)."
+        }
+      ],
+      "googleMaps": "https://maps.google.com/?q=880+E+Palm+Canyon+Dr+%23102,+Palm+Springs,+CA+92264"
+    }
+  ]
+}
