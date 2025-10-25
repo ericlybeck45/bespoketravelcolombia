@@ -1,16 +1,27 @@
+import { MetadataRoute } from 'next'
 import businesses from '../data/businesses.json';
 
-export async function GET() {
+export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = 'https://bespoketravelcolombia.com';
-  const urls = [
-    '/',
-    '/faq',
-    `/business/${businesses.businesses[0].slug}`,
-  ];
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-  for (const url of urls) {
-    xml += `\n  <url>\n    <loc>${siteUrl}${url}</loc>\n  </url>`;
-  }
-  xml += '\n</urlset>';
-  return new Response(xml, { headers: { 'Content-Type': 'application/xml' }});
+  
+  return [
+    {
+      url: siteUrl,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/business/${businesses.businesses[0].slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+  ]
 }

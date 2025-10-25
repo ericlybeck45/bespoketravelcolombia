@@ -1,28 +1,41 @@
-export async function GET() {
-  return new Response(
-    [
-      'User-agent: *',
-      'Allow: /',
-      'User-agent: GPTBot',
-      'Allow: /',
-      'User-agent: OAI-SearchBot',
-      'Allow: /',
-      'User-agent: ClaudeBot',
-      'Allow: /',
-      'User-agent: anthropic-ai',
-      'Allow: /',
-      'User-agent: PerplexityBot',
-      'Allow: /',
-      'User-agent: ChatGPT-User',
-      'Allow: /',
-      'User-agent: Meta-ExternalAgent',
-      'Allow: /',
-      'Sitemap: https://bespoketravelcolombia.com/sitemap.xml',
-    ].join('\n'),
-    {
-      headers: {
-        'Content-Type': 'text/plain; charset=utf-8',
+import { MetadataRoute } from 'next'
+
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
       },
-    },
-  );
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'anthropic-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
+      },
+    ],
+    sitemap: 'https://bespoketravelcolombia.com/sitemap.xml',
+  }
 }
